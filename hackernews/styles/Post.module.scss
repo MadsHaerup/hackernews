@@ -1,0 +1,39 @@
+.container{
+    width:100%;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+    .container__article{
+        color: white;
+        background-color: black;
+        padding: 2rem;      
+        width: 100%;
+        height:100%;
+        display: grid;
+        grid-auto-rows: min-content auto;
+        box-shadow: inset 0 0 0 0 purple;
+        transition: ease-out 0.4s;
+
+        &:hover{
+            box-shadow: inset 0 0 0 30px purple;
+        }
+
+        .author{
+            margin-bottom:0;
+        }
+        .title{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .meta{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            color: #8b8a8a;
+        }
+    }
+
+}

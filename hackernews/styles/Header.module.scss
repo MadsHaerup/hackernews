@@ -1,0 +1,16 @@
+.header{
+    height:300px;
+    position: relative;
+
+    .title{
+        font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
