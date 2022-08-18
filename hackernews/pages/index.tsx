@@ -1,5 +1,6 @@
 import type { GetServerSideProps} from 'next';
 import { Suspense } from 'react'
+import { Header } from '../components/header/Header';
 import { PostItem } from '../components/posts/PostItem';
 import { SEO } from '../components/seo/SEO';
 import styles from '../styles/Home.module.scss';
@@ -7,7 +8,6 @@ import PageData from '../types/posts';
 import dynamic from 'next/dynamic';
 
 const Footer =  dynamic(() => import('../components/footer/Footer').then((mod) => mod.default, (e) => e as never));
-const Header =  dynamic(() => import('../components/header/Header').then((mod) => mod.default, (e) => e as never));
 
 const Home = ({posts, karmaScore}:PageData) => {
 
@@ -15,10 +15,7 @@ const Home = ({posts, karmaScore}:PageData) => {
     <div className={styles.container}>
       <SEO />
 
-      <Suspense fallback={`Loading...`}>
-        <Header />
-      </Suspense>
-      
+      <Header />
       <main className={styles.main}>
       {
         posts.map((post, i)=>(
