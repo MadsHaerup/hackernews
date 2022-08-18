@@ -1,8 +1,8 @@
 import type { GetServerSideProps} from 'next';
-import Head from 'next/head';
 import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { PostItem } from '../components/posts/PostItem';
+import { SEO } from '../components/seo/SEO';
 import styles from '../styles/Home.module.scss';
 import PageData from '../types/posts';
 
@@ -11,14 +11,8 @@ const Home = ({posts, karmaScore}:PageData) => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Hacker News</title>
-        <meta name="description" content="Hacker News" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <SEO />
       <Header />
-
       <main className={styles.main}>
       {
         posts.map((post, i)=>(
