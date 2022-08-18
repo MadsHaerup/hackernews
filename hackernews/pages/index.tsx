@@ -1,9 +1,10 @@
-import type { GetServerSideProps} from 'next'
-import Head from 'next/head'
-import { Header } from '../components/header/header'
-import { PostItem } from '../components/posts/PostItem'
-import styles from '../styles/Home.module.scss'
-import PageData from '../types/posts'
+import type { GetServerSideProps} from 'next';
+import Head from 'next/head';
+import { Footer } from '../components/footer/Footer';
+import { Header } from '../components/header/Header';
+import { PostItem } from '../components/posts/PostItem';
+import styles from '../styles/Home.module.scss';
+import PageData from '../types/posts';
 
 
 const Home = ({posts, karmaScore}:PageData) => {
@@ -24,8 +25,9 @@ const Home = ({posts, karmaScore}:PageData) => {
           post.by === karmaScore[i].id ?  <PostItem key={post.id} post={post} authorKarma={karmaScore[i].karma} /> : null
         ))
       }
-
       </main>
+
+      <Footer />
     </div>
   )
 }
@@ -66,4 +68,4 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }:any) =
   }
 }
 
-export default Home
+export default Home;
