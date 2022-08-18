@@ -1,0 +1,14 @@
+.container{
+    max-width:1000px;
+    margin:0 auto;
+
+    .meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title{
+        word-break: break-word;
+    }
+}

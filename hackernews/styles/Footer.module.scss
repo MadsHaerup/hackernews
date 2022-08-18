@@ -15,10 +15,7 @@
         padding-bottom:2rem;
         gap:1rem;
         justify-content: center;
-
-        @media screen and (min-width:380px) {
-            display: flex;
-        }
+        display: flex;
     }
 
     .link{
