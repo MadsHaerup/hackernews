@@ -3,7 +3,7 @@ import { AiFillGithub  } from 'react-icons/ai';
 import { BsArrowUpRightSquare  } from 'react-icons/bs';
 
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
         <h3>Hacker News</h3>
@@ -18,3 +18,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export default Footer;
