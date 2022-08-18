@@ -4,6 +4,7 @@
     position: relative;
     background: linear-gradient(to right, red, purple);
     padding: 3px;
+
     .container__article{
         color: white;
         background-color: black;
@@ -12,11 +13,11 @@
         height:100%;
         display: grid;
         grid-auto-rows: min-content auto;
-        box-shadow: inset 0 0 0 0 purple;
-        transition: ease-out 0.4s;
 
-        &:hover{
-            box-shadow: inset 0 0 0 30px purple;
+        .score{
+            border-bottom: 1px solid rgb(176, 11, 176);
+            color:white;
+            font-weight: bold;
         }
 
         .author{
