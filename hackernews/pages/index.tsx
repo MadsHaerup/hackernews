@@ -60,10 +60,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }:any) =
 
   const returnedAuthors = await Promise.all(authors);
 
-  const resNew = await fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?orderBy="$key"&limitToFirst=10`);
-  const dataNew = await resNew.json();
+  const newStoriesResponse = await fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?orderBy="$key"&limitToFirst=10`);
+  const newStoriesData = await newStoriesResponse.json();
 
-  const newStories = dataNew.map(async(story:any) =>{
+  const newStories = newStoriesData.map(async(story:any) =>{
     const response = await fetch(`https://hacker-news.firebaseio.com/v0/item/${story}.json`);
     return await response.json();
   });
