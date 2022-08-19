@@ -1,0 +1,29 @@
+.footer{
+    max-width:1000px;
+    margin: 0 auto;
+    margin-top:2rem;
+
+    h3{
+        padding-top:2rem;
+        font-family: 'Zen Dots', cursive;
+        text-align: center;
+    }
+
+    .container{
+        padding-top:1rem;
+        padding-left:1rem;
+        padding-bottom:2rem;
+        gap:1rem;
+        justify-content: center;
+        display: flex;
+    }
+
+    .link{
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size:1rem;
+        font-weight: bold;
+        font-family: 'Zen Dots', cursive;
+    }
+}
