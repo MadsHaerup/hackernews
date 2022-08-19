@@ -12,3 +12,5 @@ export const SEO = () => {
     </Head>
   )
 }
+
+export default SEO;

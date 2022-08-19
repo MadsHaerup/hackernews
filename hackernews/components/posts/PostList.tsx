@@ -1,5 +1,5 @@
 import PageData from '../../types/postList';
-import { PostItem } from './PostItem';
+import PostItem  from './PostItem';
 import styles from '../../styles/Posts.module.scss';
 
 const PostList = ({posts, karmaScore}:PageData) => {

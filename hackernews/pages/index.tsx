@@ -1,7 +1,7 @@
 import type { GetServerSideProps} from 'next';
 import { Suspense } from 'react'
-import { Header } from '../components/header/Header';
-import { SEO } from '../components/seo/SEO';
+import  Header  from '../components/header/Header';
+import  SEO  from '../components/seo/SEO';
 import styles from '../styles/Home.module.scss';
 import PageData from '../types/page';
 import dynamic from 'next/dynamic';
@@ -16,7 +16,6 @@ const Home = ({posts, karmaScore, stories}:PageData) => {
   return (
     <div className={styles.container}>
       <SEO />
-
       <Header />
       <Title text="Top Stories" />
       <main className={styles.main}>

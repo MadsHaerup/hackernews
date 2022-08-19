@@ -2,7 +2,7 @@ import PostData from "../../types/post"
 import dateFormat from "../../utils/dateFormat";
 import styles from '../../styles/Post.module.scss';
 
-export const PostItem = ({post, authorKarma}:PostData) => {
+const PostItem = ({post, authorKarma}:PostData) => {
   return (
     <a className={styles.container} rel="noreferrer" href={post.url} target="blank">
         <article className={styles.container__article}>
@@ -17,3 +17,5 @@ export const PostItem = ({post, authorKarma}:PostData) => {
     </a>
   )
 }
+
+export default PostItem;
